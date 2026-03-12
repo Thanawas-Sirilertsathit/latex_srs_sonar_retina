@@ -38,5 +38,5 @@
 \contentsline {section}{\numberline {7.1}Summary of Achievements}{13}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Known Limitations}{13}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Future Work}{13}{section.7.3}%
-\contentsline {chapter}{Appendix A: Example}{17}{chapter*.7}%
-\contentsline {chapter}{Appendix B: About \LaTeX }{19}{chapter*.8}%
+\contentsline {chapter}{Appendix A: Example}{16}{chapter*.6}%
+\contentsline {chapter}{Appendix B: About \LaTeX }{18}{chapter*.7}%
