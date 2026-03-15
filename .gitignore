@@ -6,8 +6,11 @@
 *.ind
 *.ist
 *.log
+*.lot
+*.lof
 *.out
 *.toc
+*.synctex(busy)
 *.synctex.gz
 
 *.bbl
