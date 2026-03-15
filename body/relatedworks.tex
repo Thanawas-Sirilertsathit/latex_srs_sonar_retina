@@ -4,26 +4,59 @@
 \section{Competitor Analysis}
 \label{section:competitor-analysis}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{examples/asana-competitive-landscape.jpg}
-    \caption{Competitive Landscape by Asana}
+    \includegraphics[width=0.8\textwidth]{assets/analysis/asana-analysis.png} 
+    \caption{Competitive landscape positioning based on information density and ease of use.}
+    \label{fig:positioning-map}
 \end{figure}
 
-<TIP: 
-Refer to an article "How to create a competitive analysis (with
-examples)" by Asana. You can use the Competitor Landscape or
-Competitor Analysis Framework for your project.
-/>
+To evaluate the current state of assistive technology for the Deaf and Hard-of-Hearing, a competitive analysis was conducted using the Asana Competitor Analysis Framework. 
+The analysis focused on four core features: sound identification (Sound Type), proximity estimation (Distance), orientation (Direction), and spatial representation (Visualization). 
+
+As shown in Figure~\ref{fig:positioning-map}, existing solutions often prioritize information rather than visualization to users. 
+For instance, \textit{Spatial Sound Ball} \cite{SpatialSoundBall} provides high-quality visualization but lacks the analytical AI to identify sound types or directions. 
+Conversely, \textit{Sound Log} \cite{SoundLog} and \textit{Sound Meter} \cite{SoundMeter} offer robust sound identification and decibel tracking, yet they fail to provide the spatial orientation necessary for social navigation.
+
+\begin{table}[h]
+\centering
+\caption{Competitor Analysis of Sound Localization and Visualization Apps}
+\label{tab:competitor-comparison}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{App Name} & \textbf{Type} & \textbf{Dist.} & \textbf{Dir.} & \textbf{Vis.} \\ \hline
+Spatial Sound Ball & N & N & N & Y \\ \hline
+Sound Log & Y & N & N & N \\ \hline
+Sound Meter & Y & Y & N & N \\ \hline
+\textbf{Sonar Retina (Proposed)} & \textbf{Y} & \textbf{Y} & \textbf{Y} & \textbf{Y} \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{Sonar Retina} differentiates itself by integrating all four components into a single interface. By combining AI-driven sound classification with spatial localization, the proposed system provides a complete "acoustic map" for the user. 
+This holistic approach addresses the primary limitation of current competitors: the inability to provide both "what" and "where" in a socially navigable visual format.
 
 \section{Literature Review}
 \label{section:literature-review}
 
-<TIP: Review academic papers or technical reports
-that are relevant to your project.
-For each source, briefly summarize its key findings and
-then explain how it informs your own design or implementation decisions.
-The goal is not just to describe what others have done,
-but to build a justification for your own technical choices.
-For example, if you chose a particular algorithm or architecture,
-cite the work that supports that decision. />
+The technical foundation of this project rests on three critical pillars: Sound Source Localization (SSL), Sound Event Detection (SED), and Human-Computer Interaction (HCI) tailored for the Deaf and Hard-of-Hearing (DHH) community.
+
+\subsection{Sound Source Localization (SSL) on Mobile Hardware}
+\label{subsec:ssl}
+The first technical pillar of this project is the precise localization of acoustic events. According to the systematic review by \cite{Liaquat2021}, Sound Source Localization (SSL) is a mature field but faces unique challenges when applied to ad-hoc microphone arrays such as those found in consumer mobile devices. The review highlights that while traditional Time Difference of Arrival (TDOA) methods are highly effective, they are sensitive to environmental noise and reverberation—factors that are prevalent in the social settings our application targets.
+\\
+\\
+\textbf{Design Decision:} Building on the comparative analysis provided by Liaquat et al., we chose to implement a robust cross-correlation algorithm (GCC-PHAT). This method provides the best balance between computational efficiency for real-time mobile use and the accuracy required to visualize the horizontal direction of sound for the user.
+
+\subsection{Sound Event Detection (SED) using Deep Learning}
+\label{subsec:sed}
+Identifying "what" a sound is requires robust classification. We leverage recent advancements in Convolutional Neural Networks (CNNs) optimized for environmental audio. According to the work on the AudioSet dataset by \cite{gemmeke2017audio}, pre-trained models like YAMNet provide high-accuracy classification for non-emergency sounds such as laughter, footsteps, and environmental ambience.
+\\
+\\
+\textbf{Design Decision:} We utilize a quantized version of the YAMNet model to ensure real-time processing, allowing the app to identify social cues with minimal latency.
+
+\subsection{Sensory Substitution and Spatial UI Design}
+\label{subsec:hci}
+A key conceptual framework for this project is the "Sound Bubble" theory proposed by \cite{Eriksson2017}. Unlike traditional acoustic management that focuses on noise cancellation or emergency alerts, Eriksson et al. advocate for an "aesthetic additive" approach. They define the sound bubble as a micro-space that allows a user to maintain a link with their surrounding activities while filtering for social and sensorial relevance.
+\\
+\\
+\textbf{Design Decision:} Our UI adopts a "radar-view" approach, prioritizing spatial "texture" and directionality over dense textual logs to reduce cognitive load during social interactions.
