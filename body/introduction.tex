@@ -4,80 +4,127 @@
 \section{Background}
 \label{section:background}
 
-<TIP: 
-A background chapter in a book serves the purpose of providing essential context, information, or history that is relevant
-to the overall understanding of the book's subject matter. This chapter typically appears early in the book and aims to set the
-stage for the reader by offering background details that are crucial for comprehending the main narrative.
-/>
+In everyday life, people rely on multiple sensory inputs to understand and interact with their surroundings. 
+Among these, hearing plays an important role in recognizing environmental events such as alarms, 
+approaching vehicles, and nearby activities. These auditory cues provide important information 
+that helps individuals interpret what is happening around them.
+
+However, individuals who are deaf or hard of hearing are unable to perceive these sounds, 
+which can make it more difficult to access this information. As a result, 
+they often depend more on visual cues or external assistance to understand their environment.
+
+Assistive technologies such as hearing aids and cochlear implants have been developed to address this limitation. 
+While these technologies can be effective for some users, 
+they are not suitable for everyone and may not fully capture all types of environmental sounds. 
+This highlights the need for alternative approaches that do not rely solely on restoring hearing.
+
+This project proposes an application that represents environmental sounds in a visual form. 
+It is not intended to function as a primary or continuous tool for safety-critical awareness, 
+as relying solely on a visual interface requires constant attention and may not be appropriate in situations that demand immediate reactions, 
+such as navigating traffic. For this reason, the application is designed as a supplementary tool rather than a replacement for existing assistive technologies. 
+It enables users to observe and explore sound information by capturing audio input and presenting it visually, 
+including properties such as sound type, direction, and distance through a spatial, map-like interface. 
+The primary focus is to enhance quality of life in non-critical situations by providing an additional way to understand surrounding sounds.
+
+While the current application is designed as a supplementary tool, it also serves as a foundation for future development. 
+The underlying concept of visualizing sound could be further adapted into more integrated and responsive systems, 
+such as wearable devices or embedded assistive technologies, where information can be delivered more seamlessly. 
+With such advancements, this approach has the potential to evolve beyond a supportive application and contribute to more comprehensive assistive solutions.
 
 \section{Problem Statement}
 \label{section:problem-statement}
 
-<TIP: 
-A problem statement refers to a clear central issue,
-challenge, or question that the project aims to address or explore. It is a
-declaration that highlights the specific problem the author intends to examine,
-discuss, or solve throughout the course of the project.
-/>
+Individuals who are deaf or hard of hearing face difficulties in perceiving environmental sounds that provide important contextual information about their surroundings. 
+While existing assistive technologies such as hearing aids and cochlear implants can enhance auditory perception, 
+they are not suitable or effective for all users and may not capture all types of environmental sounds.
+
+As a result, there is a lack of accessible solutions that allow these individuals to understand surrounding audio information in an alternative and intuitive way. 
+In particular, there is limited support for representing sound characteristics, such as type, direction, and distance, 
+in a form that can be easily interpreted without relying on auditory input.
+
+Additionally, relying solely on visual tools for real-time awareness in safety-critical situations may not be appropriate, 
+as such approaches require continuous attention and may introduce risks in dynamic environments. 
+Therefore, there is a need for a solution that provides meaningful sound awareness while being suitable for non-critical, 
+everyday contexts.
+
+This project addresses the problem by exploring how environmental sound can be transformed into visual representations 
+to support better understanding and improve quality of life for users who cannot depend on traditional hearing-based technologies.
 
 \section{Solution Overview}
 \label{section:solution-overview}
 
-<TIP: 
-A software solution overview provides a high-level and
-concise description of a software product or system. It serves as an
-introduction to the software, offering a glimpse into its key features,
-functionalities, and the problems it aims to address. This overview is often
-presented in documentation, marketing materials, or other communication
-channels to give stakeholders, potential users, or decision-makers a quick
-understanding of what the software does and why it is valuable.
-/>
+The proposed solution is a software application that transforms environmental audio into visual information to assist users in understanding surrounding sounds. 
+The system captures real-time audio input and processes it to identify key characteristics such as sound type, direction, 
+and relative distance. This information is then presented through a spatial, map-like interface, 
+allowing users to intuitively interpret where sounds originate and what they represent.
+
+The application is designed to provide a supplementary method of interaction with the environment, 
+particularly for individuals who are deaf or hard of hearing and may not benefit fully from traditional assistive technologies. 
+By converting sound into visual cues, the system offers an alternative way to access information that is typically conveyed through hearing.
+
+The primary focus of the solution is to enhance quality of life in non-critical situations, 
+where users may wish to explore or better understand their surroundings. 
+The system is not intended to replace existing assistive tools or serve as a primary solution for safety-critical awareness. 
+Instead, it complements existing methods by providing an additional layer of information in a user-friendly format.
+
+In addition, the application is designed with extensibility in mind. 
+The core concept of visualizing sound can be further developed and adapted into other platforms, 
+such as wearable devices or integrated assistive systems, 
+enabling more seamless and context-aware delivery of information in the future.
 
 \subsection{Features}
 \label{subsection:features}
 
 \begin{enumerate}[leftmargin=80pt]
-    \item Feature Name: Short Description of Feature
-    \item Feature Name: Short Description of Feature
+    \item Real-time Sound Detection: Captures environmental audio input continuously from the device microphone.
+    \item Sound Classification: Identifies and categorizes detected sounds (e.g., speech, vehicle, alarm, ambient noise).
+    \item Direction Detection: Estimates the direction from which a sound originates relative to the user (e.g., east, north, east-west).
+    \item Distance Level Estimation: Provides an approximate indication of the sound source proximity using relative levels (e.g., near, far, very far).
+    \item Visual Map Interface: Displays detected sounds on a spatial, map-like interface for intuitive understanding.
+    \item Sound Visualization Indicators: Uses visual elements to represent different sound types and properties (e.g., icons, colors, markers).
+    \item User Interaction: Allows users to view, explore, and interpret sound information through the interface.
+    \item Non-Critical Usage Mode: Designed for use in non-safety-critical situations to enhance quality of life rather than replace primary assistive tools.
+    \item Extensibility Support: Designed to allow future integration with wearable or assistive technologies.
 \end{enumerate}
 
 \section{Target User}
 \label{section:target-user}
 
-<TIP: 
-The target user in a software project refers to the specific
-group or demographic of individuals for whom the software is designed and
-developed. Identifying the target user is a crucial step in the software
-development process as it helps the development team tailor the software to
-meet the needs, preferences, and requirements of that particular user group.
-Understanding the characteristics, behaviors, and expectations of the target
-users is essential for creating a user-friendly and effective software solution.
+The primary target users of this application are individuals who are deaf or hard of hearing, 
+particularly those who are unable to fully benefit from traditional assistive technologies such as hearing aids. 
+These users may seek alternative ways to understand environmental sounds in their surroundings through visual representations.
 
-Here are some key aspects related to defining the target user in a software project:
+In terms of demographics, the application is intended for a broad age range, including teenagers and adults, 
+with basic familiarity with smartphones or similar devices. 
+The design assumes general user accessibility rather than targeting a highly specialized professional group.
 
-Demographics: This includes factors such as age, gender,
-occupation, education level, and other demographic characteristics. Different
-age groups or professional backgrounds may have distinct preferences and
-requirements when it comes to software usability.
+Regarding skill level, the application is designed for users with low to moderate technical proficiency. 
+The interface emphasizes simplicity and intuitive interaction, 
+minimizing the need for extensive training or prior experience with similar systems.
 
-Skill Level: Consideration of the users' technical proficiency and
-familiarity with similar software or technology. The level of technical expertise
-can influence the complexity of the user interface, the need for tutorials or
-documentation, and other user support features.
+The application is not limited to a specific industry or domain, 
+but is intended for general everyday use in non-critical situations. 
 
-Industry or Domain: For software solutions designed for specific
-industries or domains, understanding the unique challenges, workflows, and
-terminology within that industry is crucial. Tailoring the software to meet
-industry-specific needs is often necessary.
-/>
+It may also be useful for individuals without hearing impairments who wish to explore environmental sound information through visual representation. 
+For example, users may use the application to identify different sound sources in environments such as busy streets, public spaces, or natural settings. 
+The application can also be beneficial in situations where audio perception is limited or inconvenient, 
+such as in very noisy environments or quiet zones. Additionally, it may serve as an educational or exploratory tool, 
+helping users better understand how sound behaves in different contexts, including its direction and relative distance.
+
+Overall, the system is designed to be accessible, easy to use, 
+and adaptable to the needs of users who require alternative methods for perceiving and understanding sound.
 
 \section{Terminology}
 \label{section:terminology}
 
-<TIP: 
-Terminology refers to the specific language, jargon, or
-specialized vocabulary used to describe concepts, ideas, or subjects within a
-particular field or domain. The use of terminology is often essential for clarity
-and precision, especially in books that cover technical, scientific, academic, or
-specialized topics.
-/>
+\begin{enumerate}[leftmargin=80pt]
+    \item Environmental Sound: Any sound occurring in the surrounding environment, such as speech, vehicles, alarms, or background noise.
+    \item Sound Classification: The process of identifying and categorizing detected audio into predefined types (e.g., speech, traffic, alarm).
+    \item Sound Direction: The relative position from which a sound originates with respect to the user (e.g., east, north, east-west).
+    \item Distance Level: A qualitative indication of how close or far a sound source is from the user (e.g., near, far, very far).
+    \item Sound Visualization: The representation of audio information in a visual format, such as icons, markers, or spatial elements.
+    \item Spatial Interface: A visual layout that represents the relative position of elements in space around the user, often using a map-like or abstract view.
+    \item Non-Critical Usage: Situations where the system is used for general awareness or exploration rather than safety-critical decision-making.
+    \item Supplementary Tool: A system designed to support or enhance existing methods, rather than replace them.
+    \item Real-time Processing: The ability of the system to analyze and present data immediately or with minimal delay.
+\end{enumerate}
