@@ -10,7 +10,7 @@ Unlike traditional sequential pipelines, this design decouples the sound capture
 As illustrated in Figure~\ref{fig:sys-arch}, the architecture consists of three primary layers:
 \begin{itemize}
     \item \textbf{Ingestion Layer:} The \textit{Audio Stream Dispatcher} captures raw PCM data from the microphone array and broadcasts it to independent buffers which also has \textit{Audio Processor} to transform data before it reaches service layer.
-    \item \textbf{Service Layer:} Two concurrent services—the \textit{SSL Service} (calculating direction via GCC-PHAT) and the \textit{SED Service} (identifying sound types via YAMNet)—process the same audio window simultaneously.
+    \item \textbf{Service Layer:} Two concurrent services—the \textit{SSL Service} (calculating distance via GCC-PHAT) and the \textit{SED Service} (identifying sound types via YAMNet)—process the same audio window simultaneously.
     \item \textbf{Presentation Layer:} The \textit{Data Fusion Engine} synchronizes the outputs based on high-resolution timestamps and updates the \textit{Radar UI} for the user.
 \end{itemize}
 
@@ -30,9 +30,9 @@ The sequence of interactions for a typical sound event—such as a door knock—
 \begin{enumerate}
     \item The \textit{Audio Dispatcher} pushes a 1024-sample window to the \textit{Audio Processor}.
     \item The \textit{Audio Processor} prepares the data to match each service format then sends to \textit{Service Layer}.
-    \item The \textit{SSL Service} performs cross-correlation to determine the arrival time difference, producing a directional angle $\theta$.
+    \item The \textit{SSL Service} performs cross-correlation to determine the arrival time difference, classifying the result as (Very far, Far, Medium, Close, Very close) to the $D$.
     \item Concurrently, the \textit{SED Service} generates a classification label $L$ and a confidence score $C$.
-    \item The \textit{Data Fusion Engine} validates that $C > 0.5$ and pairs $\theta$ with $L$.
+    \item The \textit{Data Fusion Engine} validates that $C > 0.5$ and pairs $D$ with $L$.
     \item The \textit{UI Controller} maps these polar coordinates to a visual icon on the radar view.
 \end{enumerate}
 
