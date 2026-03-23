@@ -3,28 +3,96 @@
 
 \section{Stakeholder Analysis}
 \label{section:stakeholder-analysis}
-<TIP: List your stakeholders for your project here/>
 
-Stakeholders are individuals, groups, or entities that
-have an interest, concern, or stake in a particular project, decision,
-organization, or system. These are individuals or groups who can affect or be
-affected by the outcomes of your project.
+Stakeholders are individuals or groups who have an interest in the system and may influence or be affected by its outcomes. 
+For this project, the key stakeholders are identified as follows:
 
+\begin{enumerate}[leftmargin=80pt]
+    \item Primary Users: The deaf and hard-of-hearing individuals who rely on the system to gain awareness of environmental sounds through visual representation.
+    \item Secondary Users: The general individuals without hearing impairments who may use the application for exploration, learning, or in situations where audio perception is limited.
+    \item Developers: The developers who are responsible for designing, implementing, and maintaining the system, ensuring performance, usability, and extensibility.
+    \item Researchers and Educators: The researchers and educators who may use the application as a tool to study sound behavior, accessibility solutions, or human-computer interaction.
+    \item Assistive Technology Community: The assistive technology community, including organizations and professionals interested in accessibility solutions who may evaluate or adopt the system in the future.
+\end{enumerate}
 
 \section{User Stories and Use Cases}
 \label{section:user-stories-use-cases}
-<TIP: For each stakeholder, write user stories that capture what
-they need from the system: "As a [stakeholder], I want to [action] so that [benefit]."
-For your most important user stories, expand them into use cases.
-A use case is a detailed description of how a system
-interacts with an external entity (such as a user or another system) to
-accomplish a specific goal. Use cases provide a high-level view of the
-functionality of a system and help in capturing and documenting its
-requirements from the perspective of end users.
 
-Make sure to use the
-appropriate type of use case for each scenario (brief, casual, and fully-dressed
-use case). />
+\subsection{User Stories}
+\begin{enumerate}[leftmargin=80pt]
+
+\item \textbf{Primary Users (Deaf and Hard-of-Hearing Individuals)}
+\begin{itemize}
+    \item As a deaf user, I want to see what sounds are occurring around me so that I can understand my environment.
+    \item As a deaf user, I want to know the direction of a sound so that I can locate its source.
+    \item As a deaf user, I want to estimate how far a sound source is so that I can judge its importance.
+    \item As a deaf user, I want real-time updates of sound activity so that I can stay aware of changes in my surroundings.
+    \item As a deaf user, I want a simple visual interface so that I can quickly interpret sound information without confusion.
+\end{itemize}
+
+\item \textbf{Secondary Users (General Users)}
+\begin{itemize}
+    \item As a user, I want to explore environmental sounds visually so that I can better understand my surroundings.
+    \item As a user, I want to identify different types of sounds so that I can learn about sound behavior.
+    \item As a user, I want to use the application in noisy environments so that I can interpret sounds more clearly.
+    \item As a user, I want an intuitive interface so that I can use the system without training.
+\end{itemize}
+
+\item \textbf{Developers}
+\begin{itemize}
+    \item As a developer, I want the system to be modular so that it can be easily maintained and extended.
+    \item As a developer, I want efficient real-time processing so that the application performs smoothly on mobile devices.
+    \item As a developer, I want to integrate machine learning models so that sound classification is accurate.
+    \item As a developer, I want clear system architecture so that future development is easier.
+\end{itemize}
+
+\item \textbf{Researchers and Educators}
+\begin{itemize}
+    \item As a researcher, I want to analyze sound data visually so that I can study sound behavior and interaction.
+    \item As an educator, I want to demonstrate sound concepts visually so that students can better understand them.
+    \item As a researcher, I want access to categorized sound data so that I can conduct experiments or evaluations.
+\end{itemize}
+
+\item \textbf{Assistive Technology Community}
+\begin{itemize}
+    \item As an accessibility expert, I want to evaluate the usability of the system so that I can assess its effectiveness.
+    \item As an organization, I want to adopt adaptable solutions so that they can be integrated into assistive technologies.
+    \item As a stakeholder, I want the system to follow accessibility principles so that it is usable by a wide audience.
+\end{itemize}
+\end{enumerate}
+
+\subsection{Use Cases}
+
+\begin{enumerate}[leftmargin=80pt]
+\item \textbf{Detect and Visualize Sound (Fully-Dressed)}
+
+Actor: User
+
+Description: The system captures environmental audio and displays it visually.  
+
+Main Flow:
+\begin{enumerate}[leftmargin=80pt]
+    \item The user opens the application.
+    \item The system activates the microphone.
+    \item Environmental sound is captured in real-time.
+    \item The system processes the sound (classification, direction, and distance).
+    \item The results are displayed on the visual map interface.
+\end{enumerate}
+
+Alternative Flow:
+\begin{enumerate}[leftmargin=80pt]
+    \item If no sound is detected, the interface remains idle or shows a neutral state.
+\end{enumerate}
+
+\item \textbf{Identify Sound Type (Casual)}
+
+The system analyzes incoming audio and categorizes it into predefined types such as speech, vehicle, or alarm. The identified type is displayed using icons or labels.
+
+\item \textbf{Explore Sound Map (Brief)}
+
+The user observes and interacts with the visual map to understand surrounding sounds.
+
+\end{enumerate}
 
 \section{Use Case Diagrams}
 \label{section:use-case-diagrams}
