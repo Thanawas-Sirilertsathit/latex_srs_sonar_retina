@@ -1,30 +1,44 @@
 \chapter{Software Development}
 \label{chap:software-development}
 
-\section{Software Development Methodology}
-\label{section:software-development-methodology}
-<TIP: Describe your software development methodology in this section. />
+% \section{Software Development Methodology}
+% \label{section:software-development-methodology}
+% <TIP: Describe your software development methodology in this section. />
 
-\section{Technology Stack}
-\label{section:technology-stack}
-<TIP: Describe your technology stack here. See the following example from ThaiProgrammer.org />
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{examples/tech-stack.png}
-    \caption{Example technology stack}
-\end{figure}
+% \section{Technology Stack}
+% \label{section:technology-stack}
+% <TIP: Describe your technology stack here. See the following example from ThaiProgrammer.org />
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{examples/tech-stack.png}
+%     \caption{Example technology stack}
+% \end{figure}
 
-\section{Coding Standards}
-\label{section:coding-standards}
-<TIP: Describe your coding standard for this project here. />
+% \section{Coding Standards}
+% \label{section:coding-standards}
+% <TIP: Describe your coding standard for this project here. />
 
 \section{Schedule}
 \label{section:schedule}
-<TIP: Show the schedule of your project.
-Use a Gantt chart. The items should agree with features
-you listed in Chapter 1. />
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth, height=8cm, keepaspectratio]{assets/timeline/timeline.png}
+    \caption{Project Schedule.}
+\end{figure}
 
-\section{Progress Tracking Report}
-\label{section:progress-tracking-report}
-<TIP: Show that you have been working on this project overtime.
-It can be in the form of a burndown chart or a contribution graph from GitHub./>
+The development of Sonar Retina follows a modular, priority-based timeline to ensure high precision and low latency in critical AI components.
+
+Phase 1: SED Development (April 2026): The initial phase focuses on the Sound Event Detection (SED) infrastructure. 
+This includes the implementation of the \textit{Audio Stream Dispatcher}, the \textit{Audio Processor} optimized for spectrogram extraction, and the core \textit{SED Service}. 
+By completing this section first, the project allows for an extended period of model fine-tuning and latency optimization throughout the remainder of 2026.
+
+Phase 2: SSL and Integration (January 2027): Following the stabilization of the SED service, development shifts to the Sound Source Localization (SSL) components. 
+This involves implementing the \textit{Audio Processor} for phase-difference analysis and the \textit{SSL Service}. 
+Concurrently, the \textit{Data Fusion Engine} and \textit{UI Controller} will begin development to manage the synchronization of spatial and semantic data.
+
+Phase 3: Final Integration and Deployment (February and March 2027): The final development sprint in February 2027 focuses on refining the \textit{UI Controller} and \textit{Data Fusion Engine} to ensure seamless visualization of results on the Radar UI. 
+The project concludes in March 2027 with final system deployment and comprehensive validation.
+% \section{Progress Tracking Report}
+% \label{section:progress-tracking-report}
+% <TIP: Show that you have been working on this project overtime.
+% It can be in the form of a burndown chart or a contribution graph from GitHub./>

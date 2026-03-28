@@ -14,6 +14,7 @@
 \usepackage{tabularx}  % Better tabular environment, with dynamic column size support
 \usepackage{indentfirst}  % Indent first paragraph after headers
 \usepackage{enumitem}  % Better control of itemize, enumerate
+\usepackage{subcaption}
 
 
 \graphicspath{{./assets}}
@@ -47,8 +48,8 @@
     \pagenumbering{roman}
     \setlength{\parindent}{40pt}
 
-    \include{body/abstract}
-    \include{body/acknowledgement}
+    % \include{body/abstract}
+    % \include{body/acknowledgement}
 
     \tableofcontents
 
@@ -71,8 +72,8 @@
     \include{body/requirementanalysis}
     \include{body/softwarearchitecture}
     \include{body/softwaredevelopment}
-    \include{body/deliverable}
-    \include{body/discussion}
+    % \include{body/deliverable}
+    % \include{body/discussion}
     %% Chapters section
 
     \input{common/onetextpage.tex}
@@ -80,6 +81,6 @@
     \bibliographystyle{IEEEtran}
     \bibliography{bibliography}  % change the inside to your bibliography file name
 
-    \include{body/appendices}
+    % \include{body/appendices}
 
 \end{document}
