@@ -36,8 +36,11 @@
     \multicolumn{1}{r}{(\usevar{\srsCoAdvisorName})} & \\[.1in]
     \fi
 
+    \ifx\srsHoDName\empty
+    \else
     \textbf{Head of Department}\dotfill & \textbf{Date}\dotfill \\
     \multicolumn{1}{r}{(\usevar{\srsHoDName})} & \\
+    \fi
 \end{tabularx}
 
 \restoregeometry
