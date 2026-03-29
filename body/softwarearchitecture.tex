@@ -49,11 +49,23 @@ This transformation allows the model to treat audio classification as a pattern 
 Moreover, it allows the model to classify the distance from the processed data.
 
 \subsection{Model Design}
-We implemented a quantized version of YAMNet a pre-trained Deep Neural Network based on the MobileNetV1 architecture. 
-\\
-\\
-\textbf{Design Decision:} YAMNet was selected over traditional CNNs due to its use of \textit{depthwise separable convolutions}, which significantly reduces the floating-point operations (FLOPs) required per inference. 
-We utilized TensorFlow Lite (TFLite) 8-bit quantization to ensure the model runs on the device’s mobile hardware without exceeding thermal limits, maintaining a low-latency "Sound-to-Insight" pipeline.
+The system utilizes a dual-model approach to concurrently identify and localize acoustic events.
+
+\subsubsection{Sound Event Detection (SED) Model}
+We implemented a quantized version of YAMNet, a pre-trained Deep Neural Network based on the MobileNetV1 architecture, for the SED service. 
+
+\textbf{Design Decision:} YAMNet was selected over traditional CNNs due to its use of \textit{depthwise separable convolutions}, which significantly reduces the floating-point operations (FLOPs) required per inference. We utilized TensorFlow Lite (TFLite) 8-bit quantization to ensure the model runs on the device’s mobile hardware without exceeding thermal limits, maintaining a low-latency "Sound-to-Insight" pipeline.
+
+\subsubsection{Sound Source Localization (SSL) Model}
+For the SSL service, we implemented a \textit{Generalized Cross-Correlation with Phase Transform} (GCC-PHAT) model. While traditionally an algorithm, it is utilized here as a classification model to estimate the proximity and direction of sound sources from the equation below.
+
+\begin{equation}
+    R_{x_1x_2}^{PHAT}(\tau) = \int_{-\infty}^{\infty} \frac{X_1(f) X_2^*(f)}{|X_1(f) X_2^*(f)|} e^{j2\pi f\tau} df
+\end{equation}
+
+\textbf{Design Decision:} The PHAT weighting functions as a whitening filter, effectively stripping away the magnitude information and focusing solely on the phase difference. 
+This makes the model highly resilient to varying volumes and background noise levels. To minimize "Time-to-Insight" for the user, the model's raw Time Difference of Arrival (TDOA) outputs are mapped into five discrete distance categories: \textit{Very Close, Close, Medium, Far,} and \textit{Very Far}. 
+This mapping is calibrated using benchmarks from the DCASE dataset to ensure consistency across different mobile hardware configurations.
 
 \subsection{Evaluation}
 To measure the success of the AI components, we use the following metrics:
