@@ -8,8 +8,8 @@ Stakeholders are individuals or groups who have an interest in the system and ma
 For this project, the key stakeholders are identified as follows:
 
 \begin{enumerate}[leftmargin=80pt]
-    \item Deaf Users: The deaf and hard-of-hearing individuals (Primary Users) who rely on the system to gain awareness of environmental sounds through visual representation.
-    \item General Users: The general individuals (Secondary Users) without hearing impairments who may use the application for exploration, learning, or in situations where audio perception is limited.
+    \item Deaf Users (Primary Users): The deaf and hard-of-hearing individuals who rely on the system to gain awareness of environmental sounds through visual representation.
+    \item General Users (Secondary Users): The general individuals without hearing impairments who may use the application for exploration, learning, or in situations where audio perception is limited.
     \item Researchers and Educators: The researchers and educators who may use the application as a tool to study sound behavior, accessibility solutions, or human-computer interaction.
     \item Assistive Technology Stakeholders: Individuals and organizations involved in assistive technology, including accessibility experts and other stakeholders, who may evaluate or adopt the system in the future.
     \item Developers: The developers who are responsible for designing, implementing, and maintaining the system, ensuring performance, usability, and extensibility.
@@ -21,7 +21,7 @@ For this project, the key stakeholders are identified as follows:
 \subsection{User Stories}
 \begin{enumerate}[leftmargin=80pt]
 
-\item \textbf{Primary Users (Deaf and Hard-of-Hearing Individuals)}
+\item \textbf{Deaf and Hard-of-Hearing Individuals (Primary Users)}
 \begin{itemize}
     \item As a deaf user, I want to see what type of sound is occurring around me so that I can understand my environment.
     \item As a deaf user, I want to know the estimated direction of a sound source so that I can locate its source.
@@ -30,7 +30,7 @@ For this project, the key stakeholders are identified as follows:
     \item As a deaf user, I want a simple visual interface so that I can quickly interpret sound information without confusion.
 \end{itemize}
 
-\item \textbf{Secondary Users (General Users)}
+\item \textbf{General Users (Secondary Users)}
 \begin{itemize}
     \item As a general user, I want to explore environmental sounds visually so that I can better understand my surroundings.
     \item As a general user, I want to use the application in various difficult environments so that I can interpret sounds more clearly.
@@ -126,97 +126,104 @@ Developers maintain the system, optimize performance, and improve machine learni
 \section{Use Case Diagrams}
 \label{section:use-case-diagrams}
 
+\subsection{Use Case Diagram}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{requirement/use_case_diagram.png}
+    \includegraphics[width=0.3\textwidth]{requirement/use_case_diagram.png}
     \caption{Use Case Diagram}
 \end{figure}
 
 \subsection{Use Case Descriptions}
 
-\subsubsection{Detect and Visualize Sound}
+\begin{enumerate}[leftmargin=80pt]
 
+\item \textbf{Detect and Visualize Sound}
+    
 \textbf{Actor:} Deaf User, General User
 
 \textbf{Description:} The system captures environmental audio and displays it visually on the interface.
 
-\subsubsection{Identify Sound Type}
+
+\item \textbf{Identify Sound Type}
 
 \textbf{Actor:} Deaf User
 
 \textbf{Description:} The system classifies detected sounds into predefined categories such as speech, car, or dog, and displays the result using icons or labels.
 
-\subsubsection{View Estimated Sound Direction}
+\item \textbf{View Estimated Sound Direction}
 
 \textbf{Actor:} Deaf User
 
 \textbf{Description:} The system estimates the direction of a sound source and represents it visually using spatial positioning on the interface.
 
-\subsubsection{View Estimated Sound Distance}
+\item \textbf{View Estimated Sound Distance}
 
 \textbf{Actor:} Deaf User
 
 \textbf{Description:} The system estimates the distance of a sound source and represents it visually using spatial positioning on the interface.
 
-\subsubsection{Receive Real-Time Updates}
+\item \textbf{Receive Real-Time Updates}
 
 \textbf{Actor:} Deaf User
 
 \textbf{Description:} The system continuously updates sound information to reflect changes in the environment in real time.
 
-\subsubsection{Explore Sound Map}
+\item \textbf{Explore Sound Map}
 
 \textbf{Actor:} General User, Researcher and Educator
 
 \textbf{Description:} The user observes and interacts with the visual map to understand the distribution and characteristics of surrounding sounds.
 
-\subsubsection{Analyze Sound Data}
+\item \textbf{Analyze Sound Data}
 
 \textbf{Actor:} Researcher and Educator
 
 \textbf{Description:} The system provides tools for analyzing collected sound data to study sound behavior and interactions.
 
-\subsubsection{Access Categorized Data}
+\item \textbf{Access Categorized Data}
 
 \textbf{Actor:} Researcher and Educator
 
 \textbf{Description:} The system provides categorized and labeled sound data for research, evaluation, or experimentation purposes.
 
-\subsubsection{Evaluate System Usability}
+\item \textbf{Evaluate System Usability}
 
 \textbf{Actor:} Assistive Technology Stakeholders
 
 \textbf{Description:} Accessibility experts evaluate the usability of the system to assess its effectiveness for target users.
 
-\subsubsection{Check Accessibility Compliance}
+\item \textbf{Check Accessibility Compliance}
 
 \textbf{Actor:} Assistive Technology Stakeholders
 
 \textbf{Description:} The system is assessed against accessibility standards to ensure it is usable by a wide audience.
 
-\subsubsection{Maintain System}
+\item \textbf{Maintain System}
 
 \textbf{Actor:} Developer
 
 \textbf{Description:} Developers maintain the system to ensure stability, reliability, and long-term functionality.
 
-\subsubsection{Improve Machine Learning Model}
+\item \textbf{Improve Machine Learning Model}
 
 \textbf{Actor:} Developer
 
 \textbf{Description:} Developers improve and update machine learning models to enhance sound classification accuracy.
 
-\subsubsection{Optimize Performance}
+\item \textbf{Optimize Performance}
 
 \textbf{Actor:} Developer
 
 \textbf{Description:} Developers optimize system performance to ensure efficient real-time processing, especially on mobile devices.
 
-\subsubsection{Ensure Modularity}
+\item \textbf{Ensure Modularity}
 
 \textbf{Actor:} Developer
 
 \textbf{Description:} Developers design and maintain a modular system architecture to support scalability and ease of maintenance.
+
+\end{enumerate}
 
 \section{User Interface Design}
 \label{section:user-interface-design}
