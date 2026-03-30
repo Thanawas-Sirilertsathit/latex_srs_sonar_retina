@@ -24,7 +24,7 @@ For this project, the key stakeholders are identified as follows:
 \item \textbf{Primary Users (Deaf and Hard-of-Hearing Individuals)}
 \begin{itemize}
     \item As a deaf user, I want to see what type of sound is occurring around me so that I can understand my environment.
-    \item As a deaf user, I want to know the direction of a sound so that I can locate its source.
+    \item As a deaf user, I want to know the estimated direction of a sound source so that I can locate its source.
     \item As a deaf user, I want to know the estimated distance of a sound source so that I can locate its source.
     \item As a deaf user, I want real-time updates of sound activity so that I can stay aware of changes in my surroundings.
     \item As a deaf user, I want a simple visual interface so that I can quickly interpret sound information without confusion.
@@ -87,7 +87,15 @@ Alternative Flow:
 
 \item \textbf{Identify Sound Type (Casual)}
 
-The system analyzes incoming audio and categorizes it into predefined types such as speech, vehicle, or alarm. The identified type is displayed using icons or labels.
+The system analyzes incoming audio and categorizes it into predefined types such as speech, vehicle, alarm, or ambient noise. The identified type is displayed using icons or labels.
+
+\item \textbf{View Estimated Sound Direction (Casual)}
+
+The system analyzes incoming audio and estimates the direction of a sound source using cardinal and intermediate directions such as east, north, or east-west. The estimated direction is displayed using spatial positioning on the interface.
+
+\item \textbf{View Estimated Sound Distance (Casual)}
+
+The system analyzes incoming audio and estimates the distance of a sound source using distance levels such as near, far, or very far. The estimated distance is displayed using spatial positioning on the interface.
 
 \item \textbf{Explore Sound Map (Brief)}
 
@@ -138,11 +146,11 @@ Developers maintain the system, optimize performance, and improve machine learni
 
 \textbf{Description:} The system classifies detected sounds into predefined categories such as speech, car, or dog, and displays the result using icons or labels.
 
-\subsubsection{View Sound Direction}
+\subsubsection{View Estimated Sound Direction}
 
 \textbf{Actor:} Deaf User
 
-\textbf{Description:} The system indicates the direction of detected sounds visually using spatial positioning on the interface.
+\textbf{Description:} The system estimates the direction of a sound source and represents it visually using spatial positioning on the interface.
 
 \subsubsection{View Estimated Sound Distance}
 
