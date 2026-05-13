@@ -28,16 +28,20 @@
 
 The development of Sonar Retina follows a modular, priority-based timeline to ensure high precision and low latency in critical AI components.
 
-Phase 1: SED Development (April 2026): The initial phase focuses on the Sound Event Detection (SED) infrastructure. 
-This includes the implementation of the \textit{Audio Stream Dispatcher}, the \textit{Audio Processor} optimized for spectrogram extraction, and the core \textit{SED Service}. 
-By completing this section first, the project allows for an extended period of model fine-tuning and latency optimization throughout the remainder of 2026.
+\textbf{Phase 1: SSL and Initial Mobile Interface Development (April 2026):}  
+The first phase focuses on the development of the Sound Source Localization (SSL) infrastructure. 
+This includes implementing the \textit{Audio Processor} for phase-difference analysis and the core \textit{SSL Service}. 
+In parallel, the initial version of the mobile interface will be developed to support basic visualization and interaction with localization outputs.
 
-Phase 2: SSL and Integration (January 2027): Following the stabilization of the SED service, development shifts to the Sound Source Localization (SSL) components. 
-This involves implementing the \textit{Audio Processor} for phase-difference analysis and the \textit{SSL Service}. 
-Concurrently, the \textit{Data Fusion Engine} and \textit{UI Controller} will begin development to manage the synchronization of spatial and semantic data.
+\textbf{Phase 2: SED, Data Fusion, and Mobile Expansion (January 2027):}  
+The second phase focuses on the Sound Event Detection (SED) components. 
+This includes implementing the \textit{Audio Stream Dispatcher}, the \textit{Audio Processor} optimized for spectrogram extraction, and the core \textit{SED Service}. 
+At the same time, development of the \textit{Data Fusion Engine} will begin to synchronize semantic and spatial information from both AI services. 
+Further improvements and feature expansion of the mobile interface will also be carried out during this phase.
 
-Phase 3: Final Integration and Deployment (February and March 2027): The final development sprint in February 2027 focuses on refining the \textit{UI Controller} and \textit{Data Fusion Engine} to ensure seamless visualization of results on the Radar UI. 
-The project concludes in March 2027 with final system deployment and comprehensive validation.
+\textbf{Phase 3: Final Integration and Deployment (February and March 2027):}  
+The final phase focuses on refining the \textit{UI Controller} and completing the \textit{Data Fusion Engine} to ensure seamless visualization and synchronization of results within the Radar UI. 
+The project concludes in March 2027 with full system integration, deployment, and comprehensive validation.
 % \section{Progress Tracking Report}
 % \label{section:progress-tracking-report}
 % <TIP: Show that you have been working on this project overtime.
